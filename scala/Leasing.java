@@ -69,7 +69,8 @@ public class Leasing	{
 		pct = paid * 100 / pay;
 		System.out.printf("[");
 		for (long i = 0; i < 80; i++)	{
-			System.out.printf(i < (pct * 8 / 10) ? "\u2588" : ".");
+			//System.out.printf(i < (pct * 8 / 10) ? "\u2588" : ".");
+			System.out.printf(i < (pct * 8 / 10) ? "#" : ".");
 		}
 		System.out.printf("%2.0f%%]\n", pct);
 	}
