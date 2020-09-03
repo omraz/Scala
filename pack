@@ -1,0 +1,5 @@
+#!/bin/bash
+
+jar cvmf MANIFEST.MF scala.jar scala/*.class
+
+java -jar scala.jar $*
