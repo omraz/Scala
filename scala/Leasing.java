@@ -1,6 +1,6 @@
 /*
- *
- *
+ *	Version Date	Note
+ *	0.0.1	06Nov20	Leasing se plati 25. mesic predem
  *
  */
 
@@ -12,7 +12,7 @@ import java.text.SimpleDateFormat;
 public class Leasing	{
 	
 	Leasing()	{
-		System.out.println("Scala Leasing   version 0.0.0");
+		System.out.println("Scala Leasing   version 0.0.1");
 
 		final double first = 1912.91;
 		final double regular = 6014.97;
