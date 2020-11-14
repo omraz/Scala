@@ -11,7 +11,6 @@ public class Scala	{
 
 		if (args.length > 0)	{
 			switch (args[0].toLowerCase())	{
-                case "le":
 				case "leasing":
 					Leasing leasing = new Leasing();
 					break;
@@ -29,6 +28,6 @@ public class Scala	{
 	}
 	
 	public static void help()	{
-		System.out.println("Usage: scala < { le | leasing } | { km | kilometry } >");
+		System.out.println("Usage: scala < Leasing | Kilometry >");
 	}
 }	

@@ -1,6 +1,6 @@
 /*
- *	Version Date	Note
- *	0.0.1	06Nov20	Leasing se plati 25. mesic predem
+ *
+ *
  *
  */
 
@@ -12,7 +12,7 @@ import java.text.SimpleDateFormat;
 public class Leasing	{
 	
 	Leasing()	{
-		System.out.println("Scala Leasing   version 0.0.1");
+		System.out.println("Scala Leasing   version 0.0.0");
 
 		final double first = 1912.91;
 		final double regular = 6014.97;
@@ -31,8 +31,6 @@ public class Leasing	{
 
 		Calendar current = Calendar.getInstance();
 		current.set(begin.get(Calendar.YEAR), 0, 1);
-		
-		Calendar twentyfifth = null;
 
 		SimpleDateFormat fmtMonth = new SimpleDateFormat("MMM");
 
@@ -42,18 +40,13 @@ public class Leasing	{
 
 		do	{
 			month = current.get(Calendar.MONTH);
-			
-			twentyfifth = (Calendar)current.clone();
-			twentyfifth.set(Calendar.DAY_OF_MONTH, 25);
-			twentyfifth.roll(Calendar.MONTH, -1);
-			
 			if (month == Calendar.JANUARY)	{
 				System.out.print("\n" + current.get(Calendar.YEAR) + "  ");				
 			}
 			if (current.getTime().compareTo(begin.getTime()) < 0)	{
 				System.out.printf("    ");
 			}
-			else if (twentyfifth.getTime().compareTo(today.getTime()) < 0)	{
+			else if (current.getTime().compareTo(today.getTime()) < 0)	{
 				System.out.printf("  X ");
 				//System.out.printf("  %c ", 0x00b0);
 				paidCnt++;

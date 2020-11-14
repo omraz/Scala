@@ -76,7 +76,6 @@ public class Kilometry	{
 			System.out.println("SQLException: " + ex.getMessage());
 			System.out.println("SQLState: " + ex.getSQLState());
 			System.out.println("VendorError: " + ex.getErrorCode());
-			return;
 		}	catch (ParseException ex)	{
 			System.out.println("ParseException: " + ex.getMessage());			
 		}
