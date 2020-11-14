@@ -12,7 +12,6 @@ import java.text.SimpleDateFormat;
 public class Leasing	{
 	
 	Leasing()	{
-		System.out.println("Scala Leasing   version 0.0.1");
 
 		final double first = 1912.91;
 		final double regular = 6014.97;

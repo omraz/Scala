@@ -8,6 +8,8 @@ package scala;
 public class Scala	{
 	
 	public static void main(String[] args)	{
+		
+		System.out.println("Scala   version 0.0.2   \u00a9 OM   14Nov20");
 
 		if (args.length > 0)	{
 			switch (args[0].toLowerCase())	{
@@ -29,6 +31,6 @@ public class Scala	{
 	}
 	
 	public static void help()	{
-		System.out.println("Usage: scala < { le | leasing } | { km | kilometry } >");
+		System.out.println("Usage: scala < { leasing | le } | { kilometry | km } >");
 	}
 }	

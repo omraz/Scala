@@ -22,8 +22,6 @@ public class Kilometry	{
 	
 	Kilometry()	{
 		
-		System.out.println("Scala Kilometry   version 0.0.0");
-
 		SimpleDateFormat formatOut = new SimpleDateFormat("dd.MM.YYYY");
 		SimpleDateFormat formatDB = new SimpleDateFormat("yyyy-MM-dd");
 		Connection con = null;
