@@ -9,7 +9,7 @@ public class Scala	{
 	
 	public static void main(String[] args)	{
 		
-		System.out.println("Scala   version 0.0.2   \u00a9 OM   14Nov20");
+		System.out.println("Scala   version 0.0.3   \u00a9 OM   27Dec20");
 
 		if (args.length > 0)	{
 			switch (args[0].toLowerCase())	{
