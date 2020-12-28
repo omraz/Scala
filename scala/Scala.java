@@ -6,7 +6,9 @@
 package scala;
 
 public class Scala	{
-	
+
+    public static Config config = new Config("scala.config");
+    	
 	public static void main(String[] args)	{
 		
 		System.out.println("Scala   version 0.0.3   \u00a9 OM   27Dec20");
@@ -31,6 +33,6 @@ public class Scala	{
 	}
 	
 	public static void help()	{
-		System.out.println("Usage: scala < { leasing | le } | { kilometry | km } >");
+		System.out.println("Usage: scala { [ leasing | le ] | [ kilometry | km ] }");
 	}
 }	

@@ -24,6 +24,7 @@ public class Kilometry	{
 		
 		SimpleDateFormat formatOut = new SimpleDateFormat("dd.MM.YYYY");
 		SimpleDateFormat formatDB = new SimpleDateFormat("yyyy-MM-dd");
+		String connectionString = null;
 		Connection con = null;
 		Statement stmt = null;
 		ResultSet rs = null;
@@ -42,8 +43,15 @@ public class Kilometry	{
 		System.out.println("    od           do      dni   skut/plan     pct  ");
 		System.out.println("--------------------------------------------------");
 		
+		connectionString = new String(
+		    "jdbc:mysql://" + Config.dbHost + 
+		    ":"             + Config.dbPort +
+		    "/scala?user="  + Config.dbUser + 
+		    "&password="    + Config.dbPassword);
+System.out.println("Connection string: " + connectionString);		
 		try	{
-			con = DriverManager.getConnection("jdbc:mysql://localhost/scala?user=scala&password=scala");
+			//con = DriverManager.getConnection("jdbc:mysql://localhost/scala?user=scala&password=scala");
+			con = DriverManager.getConnection(connectionString);
 			stmt = con.createStatement();
 			rs = stmt.executeQuery("SELECT * FROM scala.km");
 			while (rs.next())	{
