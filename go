@@ -35,6 +35,12 @@ compile scala/Kilometry
 if [ $? -ne 0 ]; then
 	exit
 fi
+
+compile scala/Config
+if [ $? -ne 0 ]; then
+	exit
+fi
+
 compile scala/Scala
 if [ $? -ne 0 ]; then
 	exit
