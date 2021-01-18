@@ -14,7 +14,7 @@ public class Scala	{
     
 	public static void main(String[] args)	{
 		
-		System.out.println("Scala   version 0.0.4   \u00a9 OM   27Dec20");
+		System.out.println("Scala   version 0.0.4   \u00a9 OM   18Jan21");
 		
 		int action = ACTION_HELP;
 		String configFile = null;
