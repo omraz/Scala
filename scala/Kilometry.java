@@ -42,13 +42,12 @@ public class Kilometry	{
 		System.out.println("--------------------------------------------------");
 		System.out.println("    od           do      dni   skut/plan     pct  ");
 		System.out.println("--------------------------------------------------");
-		
+				
 		connectionString = new String(
 		    "jdbc:mysql://" + Config.dbHost + 
 		    ":"             + Config.dbPort +
 		    "/scala?user="  + Config.dbUser + 
 		    "&password="    + Config.dbPassword);
-System.out.println("Connection string: " + connectionString);		
 		try	{
 			//con = DriverManager.getConnection("jdbc:mysql://localhost/scala?user=scala&password=scala");
 			con = DriverManager.getConnection(connectionString);
@@ -79,9 +78,10 @@ System.out.println("Connection string: " + connectionString);
 			con.close();
 		
 		}	catch (SQLException ex)	{
+            System.out.println(connectionString);
 			System.out.println("SQLException: " + ex.getMessage());
-			System.out.println("SQLState: " + ex.getSQLState());
-			System.out.println("VendorError: " + ex.getErrorCode());
+			//System.out.println("SQLState: " + ex.getSQLState());
+			//System.out.println("VendorError: " + ex.getErrorCode());
 			return;
 		}	catch (ParseException ex)	{
 			System.out.println("ParseException: " + ex.getMessage());			

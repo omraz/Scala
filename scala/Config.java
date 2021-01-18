@@ -14,7 +14,7 @@ import java.io.FileInputStream;
 
 public class Config {
 
-    public static String cnfFile = "scala.config";
+    public static String cnfFile = null;
     public static String dbHost = "localhost";
     public static String dbPort = "3306";
     public static String dbUser = "scala";
@@ -22,8 +22,9 @@ public class Config {
     
     public static void parseConfig() {
 
-        System.out.println("Config file: " + cnfFile);
-        System.out.println("Working Directory = " + System.getProperty("user.dir"));
+        //System.out.println("Config file: " + cnfFile);
+        
+        String value = null;
         
 		Properties prop = new Properties();
 		InputStream is = null;
@@ -38,32 +39,42 @@ public class Config {
 		
 		try	{
 			prop.load(is);
-			dbHost = prop.getProperty("dbhost");
-			dbPort = prop.getProperty("dbport");
-			dbUser = prop.getProperty("dbuser");
-			dbPassword = prop.getProperty("dbpassword");
-			System.out.println("dbhost     = " + dbHost);
-			System.out.println("dbport     = " + dbPort);
-			System.out.println("dbuser     = " + dbUser);
-			System.out.println("dbpassword = " + dbPassword);
+			value = prop.getProperty("dbhost");
+			if (value != null && !value.isEmpty())
+    			dbHost = value;
+    		value = prop.getProperty("dbport");
+			if (value != null && !value.isEmpty())
+    			dbPort = value;
+    		value =  prop.getProperty("dbuser");
+			if (value != null && !value.isEmpty())
+    			dbUser = value;
+    		value = prop.getProperty("dbpassword");
+			if (value != null && !value.isEmpty())
+    			dbPassword = value;
 
 			is.close();
 		}
 		catch (IOException ex)	{
 			System.out.println(ex.getMessage());
-			return;
 		}
 
+	    //System.out.println("dbhost     = " + dbHost);
+	    //System.out.println("dbport     = " + dbPort);
+	    //System.out.println("dbuser     = " + dbUser);
+	    //System.out.println("dbpassword = " + dbPassword);
 
     }
     
     Config(String filepath) {
         cnfFile = filepath;
-        parseConfig();
+        if (cnfFile != null)
+            parseConfig();
     }
     
     Config()    {
-        parseConfig();
+        // 1. create class Config
+        // 2. set .cnfFile manually
+        // 3. call .parseConfig();
     }
     
 }
