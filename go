@@ -46,4 +46,4 @@ if [ $? -ne 0 ]; then
 	exit
 fi
 
-java -cp /usr/share/java/mysql-connector-java-8.0.20.jar:. scala.Scala $1
+java -cp /usr/share/java/mysql-connector-java-8.0.20.jar:. scala.Scala $*
