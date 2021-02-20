@@ -54,7 +54,7 @@ public class Leasing	{
 			if (current.getTime().compareTo(begin.getTime()) < 0)	{
 				System.out.printf("    ");
 			}
-			else if (twentyfifth.getTime().compareTo(today.getTime()) < 0)	{
+			else if (twentyfifth.getTime().compareTo(today.getTime()) <= 0)	{
 				System.out.printf(" ---");
 				paidCnt++;
 			}
