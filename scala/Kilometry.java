@@ -47,9 +47,9 @@ public class Kilometry	{
 		    "jdbc:mysql://" + Config.dbHost + 
 		    ":"             + Config.dbPort +
 		    "/scala?user="  + Config.dbUser + 
-		    "&password="    + Config.dbPassword);
+		    "&password="    + Config.dbPassword);// +
+			//"&serverTimezone=Europe/Prague");
 		try	{
-			//con = DriverManager.getConnection("jdbc:mysql://localhost/scala?user=scala&password=scala");
 			con = DriverManager.getConnection(connectionString);
 			stmt = con.createStatement();
 			rs = stmt.executeQuery("SELECT * FROM scala.km");

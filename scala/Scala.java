@@ -10,6 +10,7 @@ public class Scala	{
     public static final int ACTION_HELP = 0;
     public static final int ACTION_LEASING = 1;
     public static final int ACTION_KM = 2;
+    public static final int ACTION_ADD = 3;
     
     
 	public static void main(String[] args)	{
@@ -28,6 +29,9 @@ public class Scala	{
 				case "kilometry":
 				case "km":
 				    action = ACTION_KM;
+					break;
+				case "add":
+					action = ACTION_ADD;
 					break;
 				case "-f":
 				    if (i + 1 <= args.length)   {
@@ -54,11 +58,14 @@ public class Scala	{
     		case ACTION_KM:
 				Kilometry kilometry = new Kilometry();
 				break;
+			case ACTION_ADD:
+				MyFrame f = new MyFrame();
+				break;
 		}
 		
 	}
 	
 	public static void help()	{
-		System.out.println("Usage: scala { -f <config-file> } { [ leasing | le ] | [ kilometry | km ] }");
+		System.out.println("Usage: scala { -f <config-file> } { [ leasing | le ] | [ kilometry | km ] [ add ] }");
 	}
 }	

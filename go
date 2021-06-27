@@ -26,6 +26,11 @@ function compile {
 	return $result
 }
 
+compile scala/Add
+if [ $? -ne 0 ]; then
+	exit
+fi
+
 compile scala/Leasing
 if [ $? -ne 0 ]; then
 	exit
@@ -46,4 +51,4 @@ if [ $? -ne 0 ]; then
 	exit
 fi
 
-java -cp /usr/share/java/mysql-connector-java-8.0.20.jar:. scala.Scala $*
+java -cp /home/mraz/lib/mysql-connector-java-8.0.20.jar:. scala.Scala -f scala.config $*
