@@ -114,6 +114,7 @@ class MyFrame
 		save.addActionListener(this);
 		c.add(save); 
 
+		setLocationRelativeTo(null);
 		setVisible(true); 
 	}
 	
@@ -185,7 +186,7 @@ class MyFrame
 
 	public void saveIt(String date, int km)	{
 		
-		System.out.println("Save " + date + "  " + km); 
+		//System.out.println("Save " + date + "  " + km); 
 
 		String connectionString = null;
 		Connection con = null;
@@ -204,6 +205,7 @@ class MyFrame
 			String sql = "INSERT INTO km (datum, tachometr) VALUES('" + date + "'," + km + ")";
 			//System.out.println(sql);
 			stmt.executeUpdate(sql);
+			JOptionPane.showMessageDialog(null, "Stav tachometru zaznamenan.", "Scala", JOptionPane.INFORMATION_MESSAGE);
 		}
 		catch (SQLException ex)	{
 			System.out.println("SQLException: " + ex.getMessage());

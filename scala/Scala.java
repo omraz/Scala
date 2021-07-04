@@ -1,5 +1,6 @@
 /*
  *  0.0.4   18Jan21 amended config file
+ *  0.0.6	04Jul21	amended the "Add" dialog
  *
  */
 
@@ -12,10 +13,9 @@ public class Scala	{
     public static final int ACTION_KM = 2;
     public static final int ACTION_ADD = 3;
     
-    
 	public static void main(String[] args)	{
 		
-		System.out.println("Scala   version 0.0.5   \u00a9 OM   20Feb21");
+		System.out.println("Scala   version 0.0.6   \u00a9 OM   04Jul21");
 		
 		int action = ACTION_HELP;
 		String configFile = null;
